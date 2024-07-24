@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-Basic caching module.
+BasicCache module
 """
 
 from base_caching import BaseCaching
+
 
 class BasicCache(BaseCaching):
     """
@@ -19,7 +20,6 @@ class BasicCache(BaseCaching):
             item (any): The item to store in the cache.
         """
         if key is not None and item is not None:
-            # Assign the item value for the given key in the cache_data dictionary
             self.cache_data[key] = item
 
     def get(self, key):
@@ -31,8 +31,6 @@ class BasicCache(BaseCaching):
             The value in self.cache_data linked to key, or None if key is None or not found.
         """
         if key is None:
-            # If the key is None, return None
             return None
-        # Return the value linked to the key, or None if the key doesn't exist in cache_data
         return self.cache_data.get(key)
 
